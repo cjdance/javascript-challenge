@@ -19,6 +19,7 @@ tableData.forEach(function(ufo) {
 var form = d3.select("#form");
 var button = d3.select("#filter-btn");
 
+form.on("submit", searchDate);
 button.on("click", searchDate);
 
 function searchDate() {
