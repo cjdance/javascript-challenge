@@ -5,11 +5,11 @@ var tbody = d3.select("tbody");
 
 // YOUR CODE HERE!
 tableData.forEach(function(ufo) {
-    console.log(ufo);
+    // console.log(ufo);
     var row = tbody.append("tr");
 
     Object.entries(ufo).forEach(function([key, value]) {
-        console.log(key, value);
+        // console.log(key, value);
 
         var cell = row.append("td");
         cell.text(value);
@@ -17,12 +17,16 @@ tableData.forEach(function(ufo) {
 });
 
 var form = d3.select("#form");
-
 var button = d3.select("#filter-btn");
+
+button.on("click", searchDate);
 
 function searchDate() {
 
     d3.event.preventDefault();
 
     var inputElement = d3.select("#datetime");
+
+    var inputValue = inputElement.property("value");
+    console.log(inputValue);
 }
