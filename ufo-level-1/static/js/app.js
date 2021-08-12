@@ -16,3 +16,6 @@ tableData.forEach(function(ufo) {
     });
 });
 
+d3.selectAll(".form-group").on("change", searchDate);
+
+function searchDate()
