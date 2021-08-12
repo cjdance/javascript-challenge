@@ -24,4 +24,5 @@ function searchDate() {
 
     d3.event.preventDefault();
 
+    var inputElement = d3.select("#datetime");
 }
