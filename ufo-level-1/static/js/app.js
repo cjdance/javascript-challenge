@@ -12,6 +12,7 @@ tableData.forEach(function(ufo) {
         console.log(key, value);
 
         var cell = row.append("td");
+        cell.text(value);
     });
 });
 
