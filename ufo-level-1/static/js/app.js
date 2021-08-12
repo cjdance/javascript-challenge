@@ -16,6 +16,12 @@ tableData.forEach(function(ufo) {
     });
 });
 
-d3.selectAll(".form-group").on("change", searchDate);
+var form = d3.select("#form");
 
-function searchDate()
+var button = d3.select("#filter-btn");
+
+function searchDate() {
+
+    d3.event.preventDefault();
+
+}
