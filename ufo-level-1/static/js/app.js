@@ -10,5 +10,8 @@ tableData.forEach(function(ufo) {
 
     Object.entries(ufo).forEach(function([key, value]) {
         console.log(key, value);
+
+        var cell = row.append("td");
     });
 });
+
