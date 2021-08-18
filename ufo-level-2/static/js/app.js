@@ -55,7 +55,7 @@ function searchData() {
     console.log(shapeValue);
     console.log(countryValue);
 
-    var filteredData = tableData.filter(ufo => ufo.datetime === inputValue);
+    var filteredData = tableData.filter(ufo => (ufo.datetime === dateValue || dateValue === ""));
     
     filteredData.forEach((ufo) => {
         var row = tbody.append("tr");
