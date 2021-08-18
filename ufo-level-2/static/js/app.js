@@ -29,12 +29,13 @@ tableData.forEach((ufo) => {
 var form = d3.select("form");
 var button = d3.select("#filter-btn");
 
-form.on("submit", searchDate);
-button.on("click", searchDate);
+form.on("submit", searchData);
+button.on("click", searchData);
 
 function searchDate() {
 
     d3.event.preventDefault();
+    tbody.html("");
 
     var inputElement = d3.select("#datetime");
 
@@ -42,18 +43,13 @@ function searchDate() {
     console.log(inputValue);
 
     var filteredData = tableData.filter(ufo => ufo.datetime === inputValue);
-    tbody.html("");
-    filteredData.forEach(function(ufo) {
-        
-        console.log(ufo);
+    
+    filteredData.forEach((ufo) => {
         var row = tbody.append("tr");
-
-        Object.entries(ufo).forEach(function([key, value]) {
-            console.log(key, value);
-
+        Object.entries(ufo).forEach(([key, value]) => {
             var cell = row.append("td");
             cell.text(value);
-        });
+        })
     });
 
 }
