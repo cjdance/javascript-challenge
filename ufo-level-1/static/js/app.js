@@ -42,7 +42,7 @@ function searchDate() {
     var inputValue = inputElement.property("value");
     console.log(inputValue);
 
-    var filteredData = tableData.filter(ufo => ufo.datetime === inputValue);
+    var filteredData = tableData.filter(ufo => (ufo.datetime === inputValue || inputValue === ""));
     
     filteredData.forEach((ufo) => {
         var row = tbody.append("tr");
