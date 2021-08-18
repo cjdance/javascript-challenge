@@ -32,15 +32,28 @@ var button = d3.select("#filter-btn");
 form.on("submit", searchData);
 button.on("click", searchData);
 
-function searchDate() {
+function searchData() {
 
     d3.event.preventDefault();
     tbody.html("");
 
-    var inputElement = d3.select("#datetime");
+    var dateElement = d3.select("#datetime");
+    var cityElement = d3.select("#city");
+    var stateElement = d3.select("#state");
+    var shapeElement = d3.select("#shape");
+    var countryElement = d3.select("#country");
 
-    var inputValue = inputElement.property("value");
-    console.log(inputValue);
+    var dateValue = dateElement.property("value");
+    var cityValue = cityElement.property("value");
+    var stateValue = stateElement.property("value");
+    var shapeValue = shapeElement.property("value");
+    var countryValue = countryElement.property("value");
+
+    console.log(dateValue);
+    console.log(cityValue);
+    console.log(stateValue);
+    console.log(shapeValue);
+    console.log(countryValue);
 
     var filteredData = tableData.filter(ufo => ufo.datetime === inputValue);
     
